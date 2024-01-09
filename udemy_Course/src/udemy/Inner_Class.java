@@ -1,17 +1,17 @@
 package udemy;
 
-class A{
+class E{
 	int age;
 	public void show() {
 		System.out.println("in show...");
 	}
 	
-	static class B{
+	static class F{
 		public void config() {
 			System.out.println("in config...");
 		}
 	}
-	class C{
+	class G{
 		public void work() {
 			System.out.println("in work block...");
 		}
@@ -20,14 +20,14 @@ class A{
 
 public class Inner_Class {
 	public static void main(String[] args) {
-		A obj = new A();
+		E obj = new E();
 		obj.age = 5;
 		obj.show();
 		
-		A.B obj1 = new A.B();
+		E.F obj1 = new E.F();
 		obj1.config();
 		
-		A.C obj2 = obj.new C();
+		E.G obj2 = obj.new G();
 		obj2.work();
 	}
 }
