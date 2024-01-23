@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="alien1" class="com.learn.Alien" autowire="byType">
+		<property name="age" value="55"></property>
+		<!-- <property name="com" ref="laptop1"></property> -->
+	</bean>
+
+	<!-- jo tame scope mention nathi karta to te singleton hoy chhe ane constructor 
+		ek j var call thay chhe -->
+
+	<!-- <bean id="alien1" class="com.learn.Alien" scope="prototype" /> -->
+	<!-- jo scope="prototype" hoy to jya sudhi tene object reference ni madad 
+		thi getbean ne call karvama no ave tya sudhi object create thato nathi -->
+
+	<!-- scope types: 1. singleton (default hoy chhe) 2. prototype 3. request 
+		4. session -->
+
+	<!-- <bean id = "alien1" class="com.learn.Alien"> <constructor-arg ref="laptop1" 
+		type="com.learn.Laptop"/> <constructor-arg value="21" type="int"/> </bean> -->
+
+	<!-- <bean id="alien1" class="com.learn.Alien"> <constructor-arg name="age" 
+		value="22"/> <constructor-arg name="lap" ref="laptop1"/> </bean> -->
+
+	<!-- <bean id="alien1" class="com.learn.Alien"> <constructor-arg index="0" 
+		value="22"/> <constructor-arg index="1" ref="laptop1"/> </bean> -->
+
+
+	<bean id="com1" class="com.learn.Laptop" primary="true">
+	</bean>
+
+	<bean id="com2" class="com.learn.Desktop" lazy-init="true">
+		<!-- jo tame class no object jate na bane jo tane tene call karo ane to 
+			teni jode lazy-init="true" kari devanu -->
+
+	</bean>
+
+</beans>
