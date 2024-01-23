@@ -17,8 +17,8 @@ public class App
     		
     		Alien obj1 = context.getBean(Alien.class);
 //    		obj1.setAge(5);
+    		System.out.println(obj1.getAge());
         	obj1.code();
-        	System.out.println(obj1.getAge());
     		
 //    		Desktop dt = context.getBean("desktop",Desktop.class);
 //    		dt.compile();

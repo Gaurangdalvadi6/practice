@@ -6,10 +6,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class Laptop {
 
-	@Autowired
-	Cpu cpu;
-	public void compile() {
-		System.out.println("Compile");
-		cpu.Control();
-	}
+//	@Autowired
+//	Cpu cpu;
+//	public void compile() {
+//		System.out.println("Compile");
+//		cpu.Control();
+//	}
 }
